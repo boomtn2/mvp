@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0386DAC-BF7D-43C4-83C7-BEB634AF2222}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>QLST</RootNamespace>
+    <AssemblyName>QLST</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ModelLapHoaDon\CTHD.cs" />
+    <Compile Include="Models\ModelLapHoaDon\HoaDon.cs" />
+    <Compile Include="Models\modelQLDoanhThu\TK_Ngay_model.cs" />
+    <Compile Include="Models\modelQLDoanhThu\TK_Thang_model.cs" />
+    <Compile Include="Models\ModelQLMatHang\MatHang.cs" />
+    <Compile Include="Models\ModelQLMatHang\MatHangModel.cs" />
+    <Compile Include="Models\ModelQLNhanVien\NhanVien.cs" />
+    <Compile Include="Models\ModelQLNhanVien\NhanVienModel.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Presenters\PresenterLapHoaDon\QLHDpresenter.cs" />
+    <Compile Include="Presenters\presenterQLDoanhThu\TK_Ngay_presenter.cs" />
+    <Compile Include="Presenters\presenterQLDoanhThu\TK_Thang_presenter.cs" />
+    <Compile Include="Presenters\PresenterQLMatHang\DSMatHangPresenter.cs" />
+    <Compile Include="Presenters\PresenterQLMatHang\SuaMatHangPresenter.cs" />
+    <Compile Include="Presenters\PresenterQLMatHang\ThemMatHangPresenter.cs" />
+    <Compile Include="Presenters\PresentersQLNhanVien\NhanVienPresenter.cs" />
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ILoginView.cs" />
+    <Compile Include="Views\ViewLapHoaDon\formQLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewLapHoaDon\formQLHD.Designer.cs">
+      <DependentUpon>formQLHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewLapHoaDon\IViewQLHD.cs" />
+    <Compile Include="Views\viewQLDoanhThu\From1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\viewQLDoanhThu\From1.Designer.cs">
+      <DependentUpon>From1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewQLDoanhThu\i_view_TK_Ngay.cs" />
+    <Compile Include="Views\viewQLDoanhThu\i_view_TK_Thang.cs" />
+    <Compile Include="Views\ViewQLMatHang\DSMatHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\DSMatHangForm.Designer.cs">
+      <DependentUpon>DSMatHangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\DSMatHangIView.cs" />
+    <Compile Include="Views\ViewQLMatHang\SuaMatHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\SuaMatHangForm.Designer.cs">
+      <DependentUpon>SuaMatHangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\SuaMatHangIView.cs" />
+    <Compile Include="Views\ViewQLMatHang\ThemMatHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\ThemMatHangForm.Designer.cs">
+      <DependentUpon>ThemMatHangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewQLMatHang\ThemMatHangIView.cs" />
+    <Compile Include="Views\ViewsQLNhanVien\INhanVienView.cs" />
+    <Compile Include="Views\ViewsQLNhanVien\QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsQLNhanVien\QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\ViewLapHoaDon\formQLHD.resx">
+      <DependentUpon>formQLHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\viewQLDoanhThu\From1.resx">
+      <DependentUpon>From1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewQLMatHang\DSMatHangForm.resx">
+      <DependentUpon>DSMatHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewQLMatHang\SuaMatHangForm.resx">
+      <DependentUpon>SuaMatHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewQLMatHang\ThemMatHangForm.resx">
+      <DependentUpon>ThemMatHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewsQLNhanVien\QLNhanVien.resx">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
